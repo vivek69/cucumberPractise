@@ -1,4 +1,4 @@
-
+/*
   package awesomeCucumber.runner;
   
   import io.cucumber.junit.Cucumber;
@@ -13,6 +13,9 @@ import org.junit.AfterClass;
   
   @CucumberOptions(
 		  plugin = {"pretty", "html:target/cucumber.html"},
+				  glue = {"awesomeCucumber.stepdef","awesomeCucumber.hooks","awesomeCucumber.types"
+						  ,"awesomeCucumber.customType"},
+				  features="src/test/resources/awesomecucumber",
 		  snippets = CAMELCASE
 		  
 		  )
@@ -25,4 +28,4 @@ import org.junit.AfterClass;
   @AfterClass
   public static void afterClass() {
   System.out.println("\n In after calss \n"); } }
- 
+ */

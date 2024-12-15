@@ -1,15 +1,15 @@
 package awesomeCucumber.customType;
 
 
-import awesomeCucumber.objects.ProductName;
+import awesomeCucumber.objects.Product;
 import io.cucumber.java.ParameterType;
 
 public class CustomParameterType {
 	
 	
 	@ParameterType(".*")
-	public ProductName product(String name) {
-		return new ProductName(name.replace("\"", ""));
+	public Product product(String name) {
+		return new Product(name.replace("\"", ""));
 	}
 
 }

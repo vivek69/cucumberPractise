@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 import awesomeCucumber.domainObjects.BillingDetails;
 
@@ -81,5 +82,11 @@ public class CheckOutPage extends BasePage {
 	}
 	public String getNotice() {
 		return wait.until(ExpectedConditions.visibilityOf(noticeText)).getText();
+	}
+
+	public void verifyAddedProduc(String productName) {
+		//Assert.assertTrue(false);
+		WebElement ele=driver.findElement(By.xpath("//*[@id='order_review']//table//td[contains(text(),'"+productName+"')]"));
+		Assert.assertTrue(ele.isDisplayed(), "Product name is not display");
 	}
 }

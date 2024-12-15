@@ -15,12 +15,12 @@ public class DataTableStepDef {
  public Customer customerEntryAgain(Map<String,String> entry) {
 	return new Customer(entry.get("username"),entry.get("password"));
 }
-*/
+
 
 public Customer customerEntry(List<String> entry) {
 	return new Customer(entry.get(0),entry.get(1));
 }
-
+*/
 
 	
 

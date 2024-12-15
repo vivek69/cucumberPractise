@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import awesomeCucumber.utils.ConfigLoader;
+
 public class BasePage {
 
 	protected WebDriver driver;
@@ -16,9 +18,9 @@ public class BasePage {
 		wait=new WebDriverWait(driver, Duration.ofSeconds(15));
 		PageFactory.initElements(driver, this);
 	}
-	public void load(String url)
+	public void load(String endPoint)
 	{
-		driver.get(url);
+		driver.get(ConfigLoader.getInstance().getBaseUrl()+endPoint);
 	}
 	
 }

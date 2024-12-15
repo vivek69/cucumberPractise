@@ -1,4 +1,4 @@
-
+/*
 package awesomeCucumber.stepdef;
 
 import awesomeCucumber.objects.Product;
@@ -37,7 +37,7 @@ public void iAddAToTheCart(String string) {
    System.out.println("I add a "+string+" to the cart");
 }
 */
-
+/*
 @When("I add a {product} to the cart")
 public void iAddAToTheCart(Product product) {
     // Write code here that turns the phrase above into concrete actions
@@ -56,4 +56,4 @@ public void iSeeProductInMyCart(Integer int1) {
 }
 
 
-}
+}*/
